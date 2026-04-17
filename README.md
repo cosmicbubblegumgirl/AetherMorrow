@@ -79,6 +79,9 @@ npm run start
 
 ## Notes
 
-- Forecasts are deterministic mock forecasts so the app runs immediately without third-party APIs.
-- The backend is structured so a real weather provider can be swapped in later.
+- Forecasts now come from Open-Meteo (live geocoding + live forecast) and are then post-processed for activity scoring.
+- If provider calls fail, the backend falls back to deterministic mock forecasts so the app remains available.
+- Optional provider overrides:
+	- `OPEN_METEO_GEOCODE_URL`
+	- `OPEN_METEO_FORECAST_URL`
 - Footer line included as requested: **A quantum cupcake creation**.
