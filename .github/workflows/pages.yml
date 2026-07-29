@@ -1,8 +1,6 @@
 name: Deploy frontend to GitHub Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -40,7 +38,7 @@ jobs:
       - name: Build frontend
         run: npm run build
         env:
-          VITE_API_BASE_URL: https://YOUR-BACKEND-URL.com
+          VITE_API_BASE_URL: https://example.com
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
